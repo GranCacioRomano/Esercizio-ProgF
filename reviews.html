@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recensioni Birre</title>
+    <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+
+    <header>
+        <h1>Recensioni delle Birre</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carica Birra</a></li>
+                <li><a href="reviews.html">Recensioni</a></li>
+                <li><a href="search.html">Cerca Birra</a></li>
+                <li><a href="profile.html">Profilo</a></li>
+                <li><a href="contest.html">Concorso</a></li>
+                <li><a href="log.html">Entra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="reviews-section">
+        <div class="review-form">
+            <h3>Aggiungi la tua recensione</h3>
+            <form id="review-form">
+                <label for="beer-name">Nome della Birra:</label>
+                <input type="text" id="beer-name" name="beer-name" required>
+
+                <label for="review-text">Scrivi la tua recensione:</label>
+                <textarea id="review-text" name="review-text" rows="4" required></textarea>
+
+                <label for="rating">Valutazione:</label>
+                <select id="rating" name="rating" required>
+                    <option value="1">1 Stella</option>
+                    <option value="2">2 Stelle</option>
+                    <option value="3">3 Stelle</option>
+                    <option value="4">4 Stelle</option>
+                    <option value="5">5 Stelle</option>
+                </select>
+
+                <button type="submit" id="submit-review">Invia la recensione</button>
+            </form>
+        </div>
+
+        <div class="reviews-list">
+            <h3>Recensioni Recenti</h3>
+            <div class="review-card">
+                <div class="review-header">
+                    <p><strong>Giovanni R.</strong> <span class="review-date">12 ottobre 2024</span></p>
+                    <div class="review-rating">
+                        <span>⭐⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <p>"Birra fantastica! Molto amara ma perfetta per gli amanti del luppolo."</p>
+            </div>
+            <div class="review-card">
+                <div class="review-header">
+                    <p><strong>Alice T.</strong> <span class="review-date">9 ottobre 2024</span></p>
+                    <div class="review-rating">
+                        <span>⭐⭐⭐⭐</span>
+                    </div>
+                </div>
+                <p>"Una buona lager, ma preferisco birre più corpose. Ottima comunque per una serata estiva."</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Brew Dex App</h4>
+                <p>&copy; 2024 Brew Dex. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Scarica l'app da:</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">App Store</a></li>
+                    <li><a href="#" target="_blank">Google Play</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

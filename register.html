@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Utente</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <h1>Registrazione</h1>
+        <p>Compila il modulo per creare un nuovo account.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carica Birra</a></li>
+                <li><a href="reviews.html">Recensioni</a></li>
+                <li><a href="search.html">Cerca Birra</a></li>
+                <li><a href="contest.html">Concorso</a></li>
+                <li><a href="log.html">Accedi</a></li>
+                <li><a href="log.html">Registrati</a></li>
+                <li><a href="profile.html">Profilo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="registration-section" class="section">
+        <div class="form-container">
+            <form id="register-form" action="register_process.php" method="post">
+                <label for="username">Nome Utente:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Conferma Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Registrati</button>
+
+                <p class="switch-auth">Hai già un account? <a href="log.html">Accedi qui</a></p>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Brew Dex App</h4>
+                <p>&copy; 2024 Brew Dex. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Scarica l'app da:</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">App Store</a></li>
+                    <li><a href="#" target="_blank">Google Play</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+</body>
+</html>

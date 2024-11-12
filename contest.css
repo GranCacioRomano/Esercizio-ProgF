@@ -1,0 +1,161 @@
+/* General Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1e1; /* Colore di sfondo */
+}
+
+/* Header */
+header {
+    background-color: #d9b68b; /* Colore di sfondo dell'intestazione */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b99d6d;
+}
+
+/* Contest Section */
+#contest-section {
+    padding: 40px;
+    text-align: center;
+}
+
+#contest-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contest-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#contest-hints h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#contest-hints p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+#contest-guess {
+    width: 300px;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+#submit-guess {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #d9b68b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit-guess:hover {
+    background-color: #b99d6d;
+}
+
+/* Footer */
+footer {
+    background-color: #d9b68b;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.social-links a:hover {
+    color: #b99d6d;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #contest-section {
+        padding: 20px;
+    }
+
+    #contest-guess {
+        width: 100%;
+    }
+
+    #submit-guess {
+        width: 100%;
+        font-size: 1.1em;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beer Identification App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header>
+        <h1>BREWDEX</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carica Birra</a></li>
+                <li><a href="reviews.html">Recensioni</a></li>
+                <li><a href="search.html">Cerca Birra</a></li>
+                <li><a href="contest.html">Concorso</a></li>
+                <li><a href="log.html">Accedi</a></li>
+                <li><a href="log.html">Registrati</a></li>
+                <li><a href="profile.html">Profilo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home-section" class="section">
+        <h2>Scopri la tua birra!</h2>
+        <p>Carica o scansiona una foto della tua birra per scoprire tutte le informazioni su di essa.</p>
+        <div id="upload-container">
+            <div class="upload-card">
+                <h3>Carica una foto dell'etichetta della birra</h3>
+                <input type="file" id="beer-image" accept="image/*">
+                <button id="upload-btn">Carica e Riconosci</button>
+            </div>
+            <div class="scan-card">
+                <h3>Fotografa l'etichetta della birra che vuoi cercare</h3>
+                <button id="scan-btn">Avvia Scansione</button>
+            </div>
+        </div>
+
+        <!-- Carousel per le ultime 10 birre scannerizzate -->
+        <section id="beer-carousel">
+            <h3>Ultime 10 birre scannerizzate</h3>
+            <div class="carousel">
+                <button class="prev-btn">❮</button>
+                <div class="carousel-images">
+                    <!-- Aggiungi immagini per le ultime 10 birre scannerizzate -->
+                    <img src="beer1.jpg" alt="Birra 1" class="carousel-item">
+                    <img src="beer2.jpg" alt="Birra 2" class="carousel-item">
+                    <img src="beer3.jpg" alt="Birra 3" class="carousel-item">
+                    <img src="beer1.jpg" alt="Birra 4" class="carousel-item">
+                    <img src="beer2.jpg" alt="Birra 5" class="carousel-item">
+                    <img src="beer3.jpg" alt="Birra 6" class="carousel-item">
+                    <img src="beer1.jpg" alt="Birra 7" class="carousel-item">
+                    <img src="beer2.jpg" alt="Birra 8" class="carousel-item">
+                    <img src="beer3.jpg" alt="Birra 9" class="carousel-item">
+                    <img src="beer1.jpg" alt="Birra 10" class="carousel-item">
+                </div>
+                <button class="next-btn">❯</button>
+            </div>
+        </section>
+
+        <!-- Sezione Birre Più Popolari -->
+        <section id="popular-beers">
+            <h3>Le 3 Birre Più Popolari</h3>
+            <div class="beer-list">
+                <div class="beer-card">
+                    <img src="beer1.jpg" alt="Birra Popolare">
+                    <h4>Birra Popolare 1</h4>
+                    <p>Valutazione: 4.8</p>
+                    <p>Birrificio: Birrificio A</p>
+                    <p>Gradazione: 5.5%</p>
+                    <p>Tipologia: Pilsner</p>
+                </div>
+                <div class="beer-card">
+                    <img src="beer2.jpg" alt="Birra Popolare">
+                    <h4>Birra Popolare 2</h4>
+                    <p>Valutazione: 4.6</p>
+                    <p>Birrificio: Birrificio B</p>
+                    <p>Gradazione: 6.2%</p>
+                    <p>Tipologia: IPA</p>
+                </div>
+                <div class="beer-card">
+                    <img src="beer3.jpg" alt="Birra Popolare">
+                    <h4>Birra Popolare 3</h4>
+                    <p>Valutazione: 4.5</p>
+                    <p>Birrificio: Birrificio C</p>
+                    <p>Gradazione: 4.8%</p>
+                    <p>Tipologia: Lager</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Brew Dex App</h4>
+                <p>&copy; 2024 Brew Dex. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Scarica l'app da:</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">App Store</a></li>
+                    <li><a href="#" target="_blank">Google Play</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>    
+
+</body>
+</html>

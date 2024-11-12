@@ -1,0 +1,263 @@
+/* Generale */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #d9b68b;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Contenitore principale dei card */
+#upload-container {
+    display: flex;
+    justify-content: center; /* Centra i quadrati orizzontalmente */
+    gap: 30px; /* Distanza tra i due quadrati */
+    flex-wrap: wrap; /* Permette il wrapping su schermi più piccoli */
+    padding-top: 50px; /* Distanza dalla parte superiore */
+}
+
+/* Card per il caricamento della foto e scansione */
+.upload-card, .scan-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra il contenuto dentro la card */
+    text-align: center; /* Allinea il testo al centro */
+}
+
+/* Titoli delle card */
+.upload-card h3, .scan-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Stile dei bottoni */
+button {
+    background-color: #d9b68b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%; /* Fa sì che i bottoni occupino tutta la larghezza della card */
+}
+
+/* Hover sui bottoni */
+button:hover {
+    background-color: #b99d6d;
+    transform: scale(1.05);
+}
+
+/* Separazione dal campo immagine per il bottone "Carica e Riconosci" */
+#upload-btn {
+    margin-top: 15px;
+}
+
+#beer-image {
+    margin-bottom: 20px;
+}
+
+/* Carousel */
+#beer-carousel {
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    max-width: 900px;
+}
+
+.carousel-item {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Bottoni del carousel */
+button.prev-btn, button.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2em;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10; /* Alzato sopra le immagini */
+    width: 40px; /* Ridotto per evitare che copra l'immagine */
+    height: 40px; /* Ridotto per evitare che copra l'immagine */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Posizione bottoni */
+button.prev-btn {
+    left: 10px;
+}
+
+button.next-btn {
+    right: 10px;
+}
+
+/* Sezione Birre Più Popolari */
+#popular-beers {
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.beer-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.beer-card {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+}
+
+.beer-card img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #d9b68b;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+/* Media Query per dispositivi piccoli */
+@media (max-width: 768px) {
+    .footer-section {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #upload-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carousel-images {
+        width: 100%;
+    }
+
+    .upload-card, .scan-card {
+        width: 80%; /* Adatta la larghezza delle card sugli schermi più piccoli */
+    }
+
+    .carousel-item {
+        height: 100px; /* Adatta l'altezza delle immagini nel carosello su dispositivi piccoli */
+    }
+
+    button.prev-btn, button.next-btn {
+        font-size: 1.5em; /* Ridurre la dimensione dei bottoni sui dispositivi più piccoli */
+        width: 35px; /* Ridurre la dimensione dei bottoni */
+        height: 35px; /* Ridurre la dimensione dei bottoni */
+    }
+}

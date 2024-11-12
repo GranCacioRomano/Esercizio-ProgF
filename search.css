@@ -1,0 +1,214 @@
+/* General Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #d9b68b; /* Colore di sfondo dell'intestazione */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b99d6d;
+}
+
+/* Sezione di ricerca */
+#search-section {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 10px;
+    width: 60%;
+    font-size: 1.1em;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 1.1em;
+    background-color: #d9b68b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #b99d6d;
+}
+
+/* Filtri */
+#filters {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    margin: 10px;
+}
+
+.filter-group label {
+    font-size: 1.1em;
+}
+
+.filter-group select,
+.filter-group input {
+    padding: 5px;
+    font-size: 1.1em;
+    width: 180px;
+}
+
+/* Risultati della ricerca */
+#beer-results {
+    margin-top: 40px;
+}
+
+.beer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.beer-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.beer-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.beer-card h4 {
+    margin: 10px 0;
+    font-size: 1.3em;
+}
+
+.beer-card button {
+    padding: 10px;
+    font-size: 1.1em;
+    background-color: #d9b68b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.beer-card button:hover {
+    background-color: #b99d6d;
+}
+
+/* Sezione Birre Simili */
+#similar-beers {
+    margin-top: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #d9b68b;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-section {
+    margin: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.social-links a:hover {
+    color: #b99d6d;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #search-input {
+        width: 80%;
+    }
+
+    #filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .beer-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

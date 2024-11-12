@@ -1,0 +1,222 @@
+/* Review Page Specific Styles */
+
+/* Sezione Recensioni */
+#reviews-section {
+    padding: 40px;
+    background-color: #f8f1e7;
+    color: #333;
+}
+
+/* Modulo per la recensione */
+.review-form {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.review-form h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d9b68b;
+}
+
+/* Form elements */
+#review-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#review-form input, 
+#review-form textarea, 
+#review-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Button style */
+#submit-review {
+    background-color: #d9b68b;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+#submit-review:hover {
+    background-color: #b99d6d;
+}
+
+/* Lista delle recensioni */
+.reviews-list h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #d9b68b;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-header p {
+    margin: 0;
+}
+
+.review-rating span {
+    font-size: 1.2em;
+}
+
+.review-card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #d9b68b;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+/* Media Query per dispositivi piccoli */
+@media (max-width: 768px) {
+    /* Modifica layout per schermi più piccoli */
+    .review-form {
+        padding: 20px;
+    }
+
+    #review-form input, 
+    #review-form textarea, 
+    #review-form select {
+        font-size: 1em;
+    }
+
+    #submit-review {
+        font-size: 1em;
+    }
+
+    .reviews-list h3 {
+        font-size: 1.8em;
+    }
+
+    .review-card {
+        padding: 15px;
+    }
+}
+/* Header */
+header {
+    background-color: #d9b68b; /* Colore di sfondo simile al resto della pagina */
+    padding: 20px 20px 10px; /* Padding superiore e laterale */
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #fff; /* Colore del testo del titolo */
+}
+
+/* Barra di navigazione */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Colore dei link */
+    font-size: 1.2em;
+    transition: color 0.3s ease; /* Transizione al passaggio del mouse */
+}
+
+nav ul li a:hover {
+    color: #b99d6d; /* Colore al passaggio del mouse */
+}
+
+/* Media Query per dispositivi piccoli */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 10px; /* Ridurre il padding su schermi più piccoli */
+    }
+
+    header h1 {
+        font-size: 2em; /* Ridurre la dimensione del titolo */
+    }
+
+    nav ul li {
+        display: block; /* Disporre i link in colonna */
+        margin: 10px 0; /* Aggiungere spazio tra i link */
+    }
+
+    nav ul li a {
+        font-size: 1.1em; /* Ridurre la dimensione del testo nei link */
+    }
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f1e7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

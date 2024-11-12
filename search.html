@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cerca Birra</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+    <header>
+        <h1>Cerca la tua Birra</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Carica Birra</a></li>
+                <li><a href="reviews.html">Recensioni</a></li>
+                <li><a href="search.html">Cerca Birra</a></li>
+                <li><a href="contest.html">Concorso</a></li>
+                <li><a href="log.html">Accedi</a></li>
+                <li><a href="log.html">Registrati</a></li>
+                <li><a href="profile.html">Profilo</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="search-section">
+        <h2>Trova la Birra Perfetta</h2>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Cerca per nome o tipologia...">
+            <button id="search-btn">Cerca</button>
+        </div>
+        <div id="filters">
+            <div class="filter-group">
+                <label for="beer-type">Tipo di Birra:</label>
+                <select id="beer-type">
+                    <option value="">Tutti</option>
+                    <option value="IPA">IPA</option>
+                    <option value="Lager">Lager</option>
+                    <option value="Stout">Stout</option>
+                    <option value="Wheat">Wheat</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="abv">Gradazione Alcolica:</label>
+                <select id="abv">
+                    <option value="">Tutti</option>
+                    <option value="0-5">0-5%</option>
+                    <option value="5-8">5-8%</option>
+                    <option value="8+">Più di 8%</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="rating">Valutazione Media:</label>
+                <select id="rating">
+                    <option value="">Tutti</option>
+                    <option value="4">4 stelle e più</option>
+                    <option value="5">5 stelle</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="brewery">Birrificio:</label>
+                <input type="text" id="brewery" placeholder="Cerca per birrificio...">
+            </div>
+        </div>
+        <section id="beer-results">
+            <h3>Risultati della ricerca</h3>
+            <div class="beer-list">
+                <div class="beer-card">
+                    <img src="beer1.jpg" alt="Birra 1">
+                    <h4>Birra IPA</h4>
+                    <p><strong>Birrificio:</strong> Birrificio ABC</p>
+                    <p><strong>Gradazione:</strong> 6%</p>
+                    <p><strong>Valutazione:</strong> 4.5 ★</p>
+                    <button>Vedi Dettagli</button>
+                </div>
+            </div>
+        </section>
+        <section id="similar-beers">
+            <h3>Birre Simili</h3>
+            <div class="beer-list">
+                <div class="beer-card">
+                    <img src="beer2.jpg" alt="Birra Simile 1">
+                    <h4>Birra Simile 1</h4>
+                    <p><strong>Birrificio:</strong> Birrificio XYZ</p>
+                    <p><strong>Gradazione:</strong> 6.5%</p>
+                    <p><strong>Valutazione:</strong> 4.3 ★</p>
+                    <button>Vedi Dettagli</button>
+                </div>
+                <div class="beer-card">
+                    <img src="beer3.jpg" alt="Birra Simile 2">
+                    <h4>Birra Simile 2</h4>
+                    <p><strong>Birrificio:</strong> Birrificio DEF</p>
+                    <p><strong>Gradazione:</strong> 5.8%</p>
+                    <p><strong>Valutazione:</strong> 4.2 ★</p>
+                    <button>Vedi Dettagli</button>
+                </div>
+
+            </div>
+        </section>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Brew Dex App</h4>
+                <p>&copy; 2024 Brew Dex. All rights reserved.</p>
+            </div>
+            <div class="footer-section">
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Scarica l'app da:</h4>
+                <ul class="social-links">
+                    <li><a href="#" target="_blank">App Store</a></li>
+                    <li><a href="#" target="_blank">Google Play</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
