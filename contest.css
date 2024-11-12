@@ -1,3 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colori */
+:root {
+    --sabbia-scura: #d2b48c;
+    --sabbia-chiara: #f4e5c3;
+    --testo-scuro: #333;
+    --bordo: #c5a770;
+}
 /* General Body */
 body {
     font-family: Arial, sans-serif;
@@ -8,37 +21,94 @@ body {
 
 /* Header */
 header {
-    background-color: #d9b68b; /* Colore di sfondo dell'intestazione */
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sabbia-scura);
+    padding: 10px 20px;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 24px;
     color: #fff;
+    margin: 0;
 }
 
-nav ul {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navigazione */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
     list-style: none;
-    padding: 0;
-    margin-top: 10px;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #b99d6d;
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--sabbia-scura);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bordo);
 }
 
 /* Contest Section */
@@ -81,7 +151,7 @@ nav ul li a:hover {
 #submit-guess {
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: #d9b68b;
+    background-color: #7b574d;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -94,42 +164,55 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #d9b68b;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
+    margin-top: auto;
+    padding: 1.5rem;
+    background-color: #7b574d;
+    width: 100%;
+    color: #ffffff;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.footer-section {
-    margin: 10px;
+.footer-section h4 {
+    margin: 0.5rem 0;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0.3rem 0;
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .footer-section ul li {
-    margin: 10px 0;
+    margin: 0.3rem 0;
 }
 
-.social-links a {
+.footer-section ul li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.1em;
 }
 
-.social-links a:hover {
-    color: #b99d6d;
+.footer-section ul li a:hover {
+    text-decoration: underline;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 0.5rem;
+}
 /* Media Query */
 @media (max-width: 768px) {
     header h1 {

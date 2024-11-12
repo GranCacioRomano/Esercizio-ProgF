@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concorso Birra Misteriosa</title>
     <link rel="stylesheet" href="contest.css">
-</head>
-<body>
-
     <header>
-        <h1>Concorso Birra Misteriosa</h1>
+        <div class="logo-container">
+            <img src="beer1.jpg" alt="Logo Brew Dex" class="logo">
+            <h1>BREW DEX</h1>
+        </div>
         <nav>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Carica Birra</a></li>
                 <li><a href="reviews.html">Recensioni</a></li>
                 <li><a href="search.html">Cerca Birra</a></li>
@@ -20,6 +20,20 @@
                 <li><a href="log.html">Registrati</a></li>
                 <li><a href="profile.html">Profilo</a></li>
             </ul>
+            <div class="burger-menu" onclick="toggleDropdownMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="dropdown-menu">
+                <a href="index.html">Carica Birra</a>
+                <a href="reviews.html">Recensioni</a>
+                <a href="search.html">Cerca Birra</a>
+                <a href="contest.html">Concorso</a>
+                <a href="log.html">Accedi</a>
+                <a href="log.html">Registrati</a>
+                <a href="profile.html">Profilo</a>
+            </div>
         </nav>
     </header>
 

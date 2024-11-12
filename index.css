@@ -1,57 +1,129 @@
-/* Generale */
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f1e7;
-    color: #333;
+    box-sizing: border-box;
+}
+
+/* Colori */
+:root {
+    --sabbia-scura: #d2b48c;
+    --sabbia-chiara: #f4e5c3;
+    --testo-scuro: #333;
+    --bordo: #c5a770;
+}
+
+/* Stile generico */
+body {
+    font-family: 'Helvetica', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--sabbia-chiara);
+    color: var(--testo-scuro);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    text-align: center;
 }
 
+/* Header */
 header {
-    background-color: #d9b68b;
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sabbia-scura);
+    padding: 10px 20px;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 24px;
     color: #fff;
+    margin: 0;
 }
 
-nav ul {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navigazione */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
     list-style: none;
-    padding: 0;
-    margin-top: 10px;
+    display: flex;
+    gap: 20px;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
+.nav-links li a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.section {
-    padding: 40px;
-    text-align: center;
-    flex: 1;
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--sabbia-scura);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bordo);
 }
 
 /* Contenitore principale dei card */
 #upload-container {
     display: flex;
-    justify-content: center; /* Centra i quadrati orizzontalmente */
-    gap: 30px; /* Distanza tra i due quadrati */
-    flex-wrap: wrap; /* Permette il wrapping su schermi più piccoli */
-    padding-top: 50px; /* Distanza dalla parte superiore */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-top: 50px;
 }
 
 /* Card per il caricamento della foto e scansione */
@@ -64,8 +136,8 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra il contenuto dentro la card */
-    text-align: center; /* Allinea il testo al centro */
+    justify-content: center;
+    text-align: center;
 }
 
 /* Titoli delle card */
@@ -76,7 +148,7 @@ nav ul li a {
 
 /* Stile dei bottoni */
 button {
-    background-color: #d9b68b;
+    background-color: var(--sabbia-scura);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -84,18 +156,21 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 100%; /* Fa sì che i bottoni occupino tutta la larghezza della card */
+    width: 100%;
 }
 
-/* Hover sui bottoni */
 button:hover {
-    background-color: #b99d6d;
+    background-color: #7b574d;
     transform: scale(1.05);
 }
 
-/* Separazione dal campo immagine per il bottone "Carica e Riconosci" */
 #upload-btn {
-    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #7b574d;
+}
+#scan-btn {
+    margin-bottom: 2px;
+    background-color: #7b574d;
 }
 
 #beer-image {
@@ -143,15 +218,14 @@ button.prev-btn, button.next-btn {
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10; /* Alzato sopra le immagini */
-    width: 40px; /* Ridotto per evitare che copra l'immagine */
-    height: 40px; /* Ridotto per evitare che copra l'immagine */
+    z-index: 10;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Posizione bottoni */
 button.prev-btn {
     left: 10px;
 }
@@ -191,40 +265,54 @@ button.next-btn {
 
 /* Footer */
 footer {
-    background-color: #d9b68b;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    width: 100%;
     margin-top: auto;
+    padding: 1.5rem;
+    background-color: #7b574d;
+    width: 100%;
+    color: #ffffff;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.footer-section {
-    flex: 1;
-    min-width: 200px;
+.footer-section h4 {
+    margin: 0.5rem 0;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0.3rem 0;
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+    margin: 0.3rem 0;
 }
 
-.footer-section h4 {
-    margin-bottom: 10px;
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 0.5rem;
 }
 
 /* Media Query per dispositivi piccoli */
@@ -248,16 +336,28 @@ footer {
     }
 
     .upload-card, .scan-card {
-        width: 80%; /* Adatta la larghezza delle card sugli schermi più piccoli */
+        width: 80%;
     }
 
     .carousel-item {
-        height: 100px; /* Adatta l'altezza delle immagini nel carosello su dispositivi piccoli */
+        height: 100px;
     }
 
     button.prev-btn, button.next-btn {
-        font-size: 1.5em; /* Ridurre la dimensione dei bottoni sui dispositivi più piccoli */
-        width: 35px; /* Ridurre la dimensione dei bottoni */
-        height: 35px; /* Ridurre la dimensione dei bottoni */
+        font-size: 1.5em;
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .burger-menu.active + .dropdown-menu {
+        display: flex;
     }
 }

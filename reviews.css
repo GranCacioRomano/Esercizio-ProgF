@@ -1,222 +1,310 @@
-/* Review Page Specific Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colori */
+:root {
+    --sabbia-scura: #d2b48c;
+    --sabbia-chiara: #f4e5c3;
+    --testo-scuro: #333;
+    --bordo: #c5a770;
+}
+/* General Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f1e1; /* Colore di sfondo */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--sabbia-scura);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #fff;
+    margin: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* Navigazione */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Burger Menu */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--sabbia-scura);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+}
+
+.dropdown-menu.active {
+    display: flex;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bordo);
+}
 
 /* Sezione Recensioni */
 #reviews-section {
     padding: 40px;
-    background-color: #f8f1e7;
-    color: #333;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
-/* Modulo per la recensione */
+/* Form Recensione */
 .review-form {
     background-color: #fff;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 600px;
 }
 
 .review-form h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    color: #d9b68b;
 }
 
-/* Form elements */
-#review-form label {
+.review-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
-#review-form input, 
-#review-form textarea, 
-#review-form select {
+.review-form input[type="text"],
+.review-form textarea,
+.review-form select {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #d9b68b;
     border-radius: 5px;
+    margin-top: 5px;
     font-size: 1em;
 }
 
-/* Button style */
-#submit-review {
-    background-color: #d9b68b;
+.review-form button {
+    background-color: #7b574d;
     border: none;
     color: white;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;
     width: 100%;
+    margin-top: 15px;
 }
 
-#submit-review:hover {
+.review-form button:hover {
     background-color: #b99d6d;
+    transform: scale(1.05);
 }
 
-/* Lista delle recensioni */
+/* Lista delle Recensioni */
+.reviews-list {
+    width: 100%;
+    max-width: 600px;
+}
+
 .reviews-list h3 {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-bottom: 20px;
-    color: #d9b68b;
 }
 
 .review-card {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
 }
 
-.review-header {
+.review-card .review-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    align-items: center;
+    font-weight: bold;
 }
 
-.review-header p {
-    margin: 0;
-}
-
-.review-rating span {
+.review-card .review-rating span {
+    color: #d9b68b;
     font-size: 1.2em;
-}
-
-.review-card p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #666;
 }
 
 /* Footer */
 footer {
-    background-color: #d9b68b;
-    padding: 20px;
-    text-align: center;
-    color: white;
+    margin-top: auto;
+    padding: 1.5rem;
+    background-color: #7b574d;
     width: 100%;
-    margin-top: 50px;
+    color: #ffffff;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.footer-section {
-    flex: 1;
-    min-width: 200px;
+.footer-section h4 {
+    margin: 0.5rem 0;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0.3rem 0;
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+    margin: 0.3rem 0;
 }
 
-.footer-section h4 {
-    margin-bottom: 10px;
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-links li {
+    margin: 0 0.5rem;
 }
 
 /* Media Query per dispositivi piccoli */
 @media (max-width: 768px) {
-    /* Modifica layout per schermi più piccoli */
-    .review-form {
+    nav ul {
+        display: none; /* Nasconde il menu principale sui dispositivi piccoli */
+    }
+
+    .burger-menu {
+        display: flex; /* Mostra l'icona del menu a tendina */
+    }
+
+    .dropdown-menu {
+        display: none; /* Nasconde il menu a tendina per default */
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: var(--sabbia-scura);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        flex-direction: column;
+        width: 200px;
+    }
+
+    .dropdown-menu.active {
+        display: flex; /* Mostra il menu a tendina quando la classe "active" è aggiunta */
+    }
+
+    .dropdown-menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .dropdown-menu a:hover {
+        background-color: var(--sabbia-chiara);
+    }
+
+    #reviews-section {
         padding: 20px;
     }
-
-    #review-form input, 
-    #review-form textarea, 
-    #review-form select {
-        font-size: 1em;
-    }
-
-    #submit-review {
-        font-size: 1em;
-    }
-
-    .reviews-list h3 {
-        font-size: 1.8em;
-    }
-
-    .review-card {
-        padding: 15px;
-    }
-}
-/* Header */
-header {
-    background-color: #d9b68b; /* Colore di sfondo simile al resto della pagina */
-    padding: 20px 20px 10px; /* Padding superiore e laterale */
-    text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #fff; /* Colore del testo del titolo */
-}
-
-/* Barra di navigazione */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff; /* Colore dei link */
-    font-size: 1.2em;
-    transition: color 0.3s ease; /* Transizione al passaggio del mouse */
-}
-
-nav ul li a:hover {
-    color: #b99d6d; /* Colore al passaggio del mouse */
-}
-
-/* Media Query per dispositivi piccoli */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 10px; /* Ridurre il padding su schermi più piccoli */
-    }
-
-    header h1 {
-        font-size: 2em; /* Ridurre la dimensione del titolo */
-    }
-
-    nav ul li {
-        display: block; /* Disporre i link in colonna */
-        margin: 10px 0; /* Aggiungere spazio tra i link */
-    }
-
-    nav ul li a {
-        font-size: 1.1em; /* Ridurre la dimensione del testo nei link */
-    }
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f1e7;
-    color: #333;
+/* Logo */
+.logo-container {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
 }
