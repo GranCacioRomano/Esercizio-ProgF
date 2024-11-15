@@ -1,10 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#upload-container .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-/* Colori */
+/* Defining custom variables */
 :root {
     --sabbia-scura: #d2b48c;
     --sabbia-chiara: #f4e5c3;
@@ -12,352 +11,105 @@
     --bordo: #c5a770;
 }
 
-/* Stile generico */
+/* General body styling */
 body {
-    font-family: 'Helvetica', sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: var(--sabbia-chiara);
     color: var(--testo-scuro);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--sabbia-scura);
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 24px;
-    color: #fff;
     margin: 0;
+    padding: 0;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-/* Navigazione */
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-}
-
-.nav-links li a:hover {
-    text-decoration: underline;
-}
-
-/* Burger Menu */
-.burger-menu {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 4px;
-}
-
-.burger-menu span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 3px;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
+/* Navbar Styling */
+.navbar {
     background-color: var(--sabbia-scura);
+}
+
+.navbar .navbar-brand {
+    color: var(--sabbia-chiara);
+}
+
+.navbar .navbar-brand:hover {
+    color: var(--bordo);
+}
+
+.navbar-nav .nav-link {
+    color: var(--sabbia-chiara);
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--bordo);
+}
+
+/* Main Section Styling */
+#home-section h2 {
+    color: var(--sabbia-scura);
+}
+
+#home-section p {
+    color: var(--testo-scuro);
+}
+
+/* Card Styling */
+.card {
+    border: 1px solid var(--bordo);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--sabbia-chiara);
 }
 
-.dropdown-menu.active {
-    display: flex;
+.card-body {
+    color: var(--testo-scuro);
 }
 
-.dropdown-menu a {
-    display: block;
-    padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
+.card-title {
+    color: var(--sabbia-scura);
 }
 
-.dropdown-menu a:hover {
+.card .card-img-top {
+    border-bottom: 2px solid var(--bordo);
+}
+
+/* Carousel Styling */
+.carousel-item {
+    background-color: var(--sabbia-chiara);
+    padding: 20px 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
     background-color: var(--bordo);
 }
 
-/* Contenitore principale dei card */
-#upload-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding-top: 50px;
-}
-
-/* Card per il caricamento della foto e scansione */
-.upload-card, .scan-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Titoli delle card */
-.upload-card h3, .scan-card h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-}
-
-/* Stile dei bottoni */
-button {
-    background-color: var(--sabbia-scura);
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #7b574d;
-    transform: scale(1.05);
-}
-
-#upload-btn {
-    margin-bottom: 15px;
-    background-color: #7b574d;
-}
-#scan-btn {
-    margin-bottom: 2px;
-    background-color: #7b574d;
-}
-
-#beer-image {
-    margin-bottom: 20px;
-}
-
-/* Carousel */
-#beer-carousel {
-    margin-top: 50px;
-    padding: 0 20px;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.carousel-images {
-    display: flex;
-    overflow: hidden;
-    width: 80%;
-    max-width: 900px;
-}
-
-.carousel-item {
-    max-width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Bottoni del carousel */
-button.prev-btn, button.next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 2em;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-button.prev-btn {
-    left: 10px;
-}
-
-button.next-btn {
-    right: 10px;
-}
-
-/* Sezione Birre Più Popolari */
-#popular-beers {
-    margin-top: 50px;
-    padding: 0 20px;
-}
-
-.beer-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.beer-card {
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 200px;
-}
-
-.beer-card img {
-    max-width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Footer */
+/* Footer Styling */
 footer {
-    margin-top: auto;
-    padding: 1.5rem;
-    background-color: #7b574d;
-    width: 100%;
-    color: #ffffff;
+    background-color: var(--sabbia-scura);
+    color: var(--sabbia-chiara);
 }
 
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+footer a {
+    color: var(--sabbia-chiara);
 }
 
-.footer-section h4 {
-    margin: 0.5rem 0;
+footer a:hover {
+    color: var(--bordo);
 }
 
-.footer-section p,
-.footer-section ul {
-    margin: 0.3rem 0;
+/* Button Styling */
+.btn-primary {
+    background-color: var(--bordo);
+    border: none;
 }
 
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
+.btn-primary:hover {
+    background-color: var(--sabbia-scura);
 }
 
-.footer-section ul li {
-    margin: 0.3rem 0;
+.btn-success {
+    background-color: var(--bordo);
+    border: none;
 }
 
-.footer-section ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.footer-section ul li a:hover {
-    text-decoration: underline;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.social-links li {
-    margin: 0 0.5rem;
-}
-
-/* Media Query per dispositivi piccoli */
-@media (max-width: 768px) {
-    .footer-section {
-        text-align: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    #upload-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .carousel-images {
-        width: 100%;
-    }
-
-    .upload-card, .scan-card {
-        width: 80%;
-    }
-
-    .carousel-item {
-        height: 100px;
-    }
-
-    button.prev-btn, button.next-btn {
-        font-size: 1.5em;
-        width: 35px;
-        height: 35px;
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .burger-menu {
-        display: flex;
-    }
-
-    .burger-menu.active + .dropdown-menu {
-        display: flex;
-    }
+.btn-success:hover {
+    background-color: var(--sabbia-scura);
 }
