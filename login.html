@@ -45,59 +45,31 @@
           </div>
         </div>
     </nav>
-    <section id="reviews-section" class="container mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Aggiungi la tua recensione</h3>
-                <form id="review-form">
-                    <div class="form-group">
-                        <label for="beer-name">Nome della Birra:</label>
-                        <input type="text" class="form-control" id="beer-name" name="beer-name" required>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="review-text">Scrivi la tua recensione:</label>
-                        <textarea class="form-control" id="review-text" name="review-text" rows="4" required></textarea>
+    <section id="login-section" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card p-4">
+                        <h2 class="text-center mb-4">Login</h2>
+                        <form action="login_process.php" method="POST" id="login-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password:</label>
+                                <input type="password" id="password" name="password" class="form-control" required>
+                            </div>
+                            <button type="submit" id="login-btn" class="btn btn-primary w-100">Accedi</button>
+                        </form>
+                        <p class="mt-3 text-center">Non hai un account? <a href="register.html">Registrati qui</a></p>
                     </div>
-
-                    <div class="form-group">
-                        <label for="rating">Valutazione:</label>
-                        <select class="form-control" id="rating" name="rating" required>
-                            <option value="1">1 Stella</option>
-                            <option value="2">2 Stelle</option>
-                            <option value="3">3 Stelle</option>
-                            <option value="4">4 Stelle</option>
-                            <option value="5">5 Stelle</option>
-                        </select>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Invia la recensione</button>
-                </form>
-            </div>
-
-            <div class="col-md-6">
-                <h3>Recensioni Recenti</h3>
-                <div class="review-card mb-3">
-                    <div class="review-header">
-                        <p><strong>Stefano P.</strong> <span class="review-date">12 ottobre 2024</span></p>
-                        <div class="review-rating">
-                            <span>⭐⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                    <p>"Birra fantastica! Molto amara ma perfetta per gli amanti del luppolo."</p>
-                </div>
-                <div class="review-card mb-3">
-                    <div class="review-header">
-                        <p><strong>Carlotta P.</strong> <span class="review-date">9 ottobre 2024</span></p>
-                        <div class="review-rating">
-                            <span>⭐⭐⭐⭐</span>
-                        </div>
-                    </div>
-                    <p>"Una buona lager, ma preferisco birre più corpose. Ottima comunque per una serata estiva."</p>
                 </div>
             </div>
         </div>
     </section>
+
     <footer class="bg-dark text-white py-4">
         <div class="container d-flex justify-content-between">
             <div class="footer-section">
